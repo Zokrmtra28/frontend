@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f5f5f4; color: #292524; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #065f46; color: #fff; }
+nav a, nav button { color: #fff; margin-left: 14px; background: none; border: 0; font-size: 1rem; cursor: pointer; text-decoration: none; }
+main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+h1 { color: #065f46; }
+.view { display: none; }
+.view.on { display: block; }
+.card { background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+.narrow { max-width: 420px; margin: 30px auto; }
+.two { display: grid; gap: 20px; grid-template-columns: 1fr 320px; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); align-content: start; }
+label { display: block; margin-bottom: 10px; font-weight: 600; font-size: .9rem; }
+input, select, textarea { display: block; width: 100%; margin-top: 4px; padding: 8px; border: 1px solid #d6d3d1; border-radius: 6px; font: inherit; }
+.btn { background: #d97706; color: #fff; border: 0; padding: 10px 14px; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.small { width: auto; padding: 6px 10px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.badge { padding: 3px 9px; border-radius: 6px; font-size: .8rem; font-weight: 600; background: #fef3c7; }
+.badge.IN_DELIVERY { background: #d1fae5; }
+.badge.DELIVERED { background: #065f46; color: #fff; }
+.badge.CANCELLED { background: #d6d3d1; }
+#msg { padding: 10px; border-radius: 6px; background: #fef3c7; border: 1px solid #fcd34d; }
+#msg.ok { background: #d1fae5; border-color: #6ee7b7; }
+.price { color: #065f46; font-weight: 700; }
+@media (max-width: 700px) { .two { grid-template-columns: 1fr; } }

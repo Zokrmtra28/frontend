@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livraison Commande</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><b>Livraison</b><nav id="nav"></nav></header>
+  <main>
+    <p id="msg" hidden></p>
+
+    <section id="login" class="view">
+      <form id="loginForm" class="card narrow">
+        <h1>Connexion</h1>
+        <label>Nom d'utilisateur <input name="username" required></label>
+        <label>Mot de passe <input name="password" type="password" required></label>
+        <button class="btn">Se connecter</button>
+        <p>Pas de compte ? <a href="#" data-go="register">S'inscrire</a></p>
+      </form>
+    </section>
+
+    <section id="register" class="view">
+      <form id="registerForm" class="card narrow">
+        <h1>Inscription</h1>
+        <label>Prénom <input name="first_name"></label>
+        <label>Nom <input name="last_name"></label>
+        <label>Nom d'utilisateur <input name="username" required></label>
+        <label>Email <input name="email" type="email"></label>
+        <label>Mot de passe (6 caractères min.) <input name="password" type="password" minlength="6" required></label>
+        <label>Je suis
+          <select name="role"><option value="CLIENT">Client</option><option value="LIVREUR">Livreur</option></select>
+        </label>
+        <button class="btn">Créer mon compte</button>
+        <p>Déjà inscrit ? <a href="#" data-go="login">Se connecter</a></p>
+      </form>
+    </section>
+
+    <section id="catalog" class="view">
+      <h1>Catalogue</h1>
+      <div class="two">
+        <div id="products" class="grid"></div>
+        <aside class="card">
+          <h2>🛒 Panier</h2>
+          <div id="cart"></div>
+          <form id="orderForm">
+            <label>Adresse de livraison <textarea name="adresse_texte" rows="2" required></textarea></label>
+            <label>Téléphone <input name="telephone" required></label>
+            <button class="btn">Passer la commande</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section id="orders" class="view"><h1>Mes commandes</h1><div id="orderList"></div></section>
+    <section id="admin" class="view"><h1>Dashboard Admin</h1><div id="adminList"></div></section>
+    <section id="delivery" class="view"><h1>Dashboard Livreur</h1><div id="deliveryList"></div></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
